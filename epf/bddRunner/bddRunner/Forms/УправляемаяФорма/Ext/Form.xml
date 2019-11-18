@@ -4597,6 +4597,117 @@
 								</UsualGroup>
 							</ChildItems>
 						</Page>
+						<Page name="ГруппаПлагины" id="1839">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Плагины</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа плагины</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаПлагиныРасширеннаяПодсказка" id="1840"/>
+							<ChildItems>
+								<UsualGroup name="СвоиПлагины" id="1841">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительные плагины</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Свои плагины</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<ExtendedTooltip name="СвоиПлагиныРасширеннаяПодсказка" id="1842"/>
+									<ChildItems>
+										<Table name="КаталогиПлагинов" id="1843">
+											<Representation>List</Representation>
+											<Header>false</Header>
+											<HorizontalLines>false</HorizontalLines>
+											<VerticalLines>false</VerticalLines>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<DataPath>Объект.КаталогиПлагинов</DataPath>
+											<RowPictureDataPath>Объект.КаталогиПлагинов.Picture</RowPictureDataPath>
+											<ContextMenu name="КаталогиПлагиновКонтекстноеМеню" id="1844"/>
+											<AutoCommandBar name="КаталогиПлагиновКоманднаяПанель" id="1845">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="КаталогиПлагиновДобавить" id="1856">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ДобавитьСтрокуВСписокПлагинов</CommandName>
+														<ExtendedTooltip name="КаталогиПлагиновДобавитьРасширеннаяПодсказка" id="1857"/>
+													</Button>
+													<Button name="КомандаСохранитьНастройки3" id="1860">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Command.КомандаСохранитьНастройки</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Сохранить настройки</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="КомандаСохранитьНастройки3РасширеннаяПодсказка" id="1861"/>
+													</Button>
+													<Button name="КаталогиПлагиновОчистить" id="1858">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ОчиститьСтрокиВСпискеПлагинов</CommandName>
+														<ExtendedTooltip name="КаталогиПлагиновОчиститьРасширеннаяПодсказка" id="1859"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="КаталогиПлагиновРасширеннаяПодсказка" id="1846"/>
+											<SearchStringAddition name="КаталогиПлагиновСтрокаПоиска" id="1847">
+												<AdditionSource>
+													<Item>КаталогиПлагинов</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="КаталогиПлагиновСтрокаПоискаКонтекстноеМеню" id="1848"/>
+												<ExtendedTooltip name="КаталогиПлагиновСтрокаПоискаРасширеннаяПодсказка" id="1849"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="КаталогиПлагиновСостояниеПросмотра" id="1850">
+												<AdditionSource>
+													<Item>КаталогиПлагинов</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="КаталогиПлагиновСостояниеПросмотраКонтекстноеМеню" id="1851"/>
+												<ExtendedTooltip name="КаталогиПлагиновСостояниеПросмотраРасширеннаяПодсказка" id="1852"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="КаталогиПлагиновУправлениеПоиском" id="1853">
+												<AdditionSource>
+													<Item>КаталогиПлагинов</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="КаталогиПлагиновУправлениеПоискомКонтекстноеМеню" id="1854"/>
+												<ExtendedTooltip name="КаталогиПлагиновУправлениеПоискомРасширеннаяПодсказка" id="1855"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="КаталогиПлагиновЗначение" id="1862">
+													<DataPath>Объект.КаталогиПлагинов.Value</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ChoiceButton>true</ChoiceButton>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="КаталогиПлагиновЗначениеКонтекстноеМеню" id="1863"/>
+													<ExtendedTooltip name="КаталогиПлагиновЗначениеРасширеннаяПодсказка" id="1864"/>
+													<Events>
+														<Event name="StartChoice">КаталогиПлагиновЗначениеНачалоВыбора</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
 						<Page name="ГруппаДополнительно" id="292">
 							<Title>
 								<v8:item>
@@ -18964,6 +19075,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьОткрытьОтчетAllure</Action>
+		</Command>
+		<Command name="ДобавитьСтрокуВСписокПлагинов" id="80">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить строку в список плагинов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьСтрокуВСписокПлагинов</Action>
+		</Command>
+		<Command name="ОчиститьСтрокиВСпискеПлагинов" id="81">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить строки в списке плагинов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьСтрокиВСпискеПлагинов</Action>
 		</Command>
 	</Commands>
 </Form>
