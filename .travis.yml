@@ -32,7 +32,7 @@ cache:
 before_install:
   - cd ./tools/python/usersv8
   - python setup.py install
-  - cd
+  - cd $TRAVIS_BUILD_DIR
   - sudo ./tools/linux/dockerdownload.sh
   - docker images | grep onec
 

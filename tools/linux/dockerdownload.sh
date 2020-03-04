@@ -10,13 +10,11 @@ echo $dockerid
 if [[ -f ${HOME}/docker/onec32_client_${ONECVERSION}.tar.xz ]]; then
     echo "found"
 else
+
     echo "${HOME}/docker/onec32_client_${ONECVERSION}.tar.xz"
-    if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then 
-        wget -nv --continue -O ${HOME}/docker/onec32_client_${ONECVERSION}.tar.xz http://bit.ly/2El7sy5    
-    fi
-    if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then 
-        wget -nv --continue -O ${HOME}/docker/onec32_client_${ONECVERSION}.tar.xz $URL_TARCLIENT
-    fi
+    usersv8 platform client --version ${ONECVERSION} --out-file ${HOME}/docker/onec32_client_${ONECVERSION}.tar.xz --username ${V8_USER} --password ${V8_PASS}
+
+    
 fi
 if [[ -z $dockerid ]]; then
     
