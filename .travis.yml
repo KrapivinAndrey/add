@@ -30,7 +30,9 @@ cache:
     - '$TRAVIS_BUILD_DIR/.forbuild'
 
 before_install:
-  - python ./tools/python/usersv8/setup.py install
+  - cd ./tools/python/usersv8
+  - python setup.py install
+  - cd
   - sudo ./tools/linux/dockerdownload.sh
   - docker images | grep onec
 
