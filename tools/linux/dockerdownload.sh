@@ -12,7 +12,7 @@ if [[ -f ${HOME}/docker/onec32_client_${ONECVERSION}.tar.xz ]]; then
 else
 
     echo "${HOME}/docker/onec32_client_${ONECVERSION}.tar.xz"
-    usersv8 platform client --version ${ONECVERSION} --out-file ${HOME}/docker/onec32_client_${ONECVERSION}.tar.xz --username ${V8_USER} --password ${V8_PASS}
+    sh usersv8 platform client --version ${ONECVERSION} --out-file ${HOME}/docker/onec32_client_${ONECVERSION}.tar.xz --username ${V8_USER} --password ${V8_PASS}
 
     
 fi
