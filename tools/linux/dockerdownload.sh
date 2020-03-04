@@ -10,12 +10,10 @@ echo $dockerid
 if [[ -f ${HOME}/docker/onec32_client_${ONECVERSION}.tar.xz ]]; then
     echo "found"
 else
-
     echo "${HOME}/docker/onec32_client_${ONECVERSION}.tar.xz"
     usersv8 platform client --version ${ONECVERSION} --out-file ${HOME}/docker/onec32_client_${ONECVERSION}.tar.xz --username ${V8_USER} --password ${V8_PASS}
-
-    
 fi
+
 if [[ -z $dockerid ]]; then
     
     xz -d -c ${HOME}/docker/onec32_client_${ONECVERSION}.tar.xz | docker load
