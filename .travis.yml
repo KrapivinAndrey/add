@@ -15,6 +15,7 @@ addons:
     packages:
       # 7z is used for packaging (see before_deploy)
       - p7zip-full
+      - python3-pip
 
 cache:
   directories:
@@ -25,6 +26,7 @@ cache:
     - '$TRAVIS_BUILD_DIR/.forbuild'
 
 before_install:
+  - 
   - sudo ./tools/linux/dockerdownload.sh
   - docker images | grep onec
 
