@@ -19,7 +19,6 @@ addons:
     packages:
       # 7z is used for packaging (see before_deploy)
       - p7zip-full
-      - python3-pip
 
 cache:
   directories:
@@ -30,11 +29,9 @@ cache:
     - '$TRAVIS_BUILD_DIR/.forbuild'
 
 before_install:
-  - cd ./tools/python/usersv8
-  - python setup.py install
-  - cd $TRAVIS_BUILD_DIR
+  - easy_install ./tools/python/usersv8
   - usersv8 -h
-  - sudo ./tools/linux/dockerdownload.sh
+  - sh ./tools/linux/dockerdownload.sh
   - docker images | grep onec
 
 before_cache:
